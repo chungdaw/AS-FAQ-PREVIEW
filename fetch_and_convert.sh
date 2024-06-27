@@ -9,7 +9,7 @@ GOOGLE_DRIVE_LINK="$1"
 FILE_ID=$(echo $GOOGLE_DRIVE_LINK | grep -o 'd/[^/]*' | cut -d'/' -f2)
 CONVERTED_FILE_NAME="$2"
 FILE_NAME="downloaded_file.csv"
-OUTPUT_FOLDER="/home/ic_chungdau_wang/faq/source/"
+OUTPUT_FOLDER="${HOME}/workspace/AS-FAQ-PREVIEW/source/"
 
 curl -L "https://drive.google.com/uc?id=${FILE_ID}" -o ${FILE_NAME}
 
