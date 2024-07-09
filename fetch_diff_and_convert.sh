@@ -27,8 +27,8 @@ fi
 
 
 # Determine the encoding of the downloaded file
-encoding=$(file -i "${TEMP_FILE}" | cut -f 2 -d";" | cut -f 2 -d=)
-   
+encoding=$(uchardet "${TEMP_FILE}")
+
 case $encoding in
   iso-8859-1)
     iconv -f iso-8859-1 -t utf-8 "${TEMP_FILE}" -o "${TEMP_FILE}.utf8"
@@ -43,7 +43,7 @@ case $encoding in
     ;;
   big5)
     iconv -f big5 -t utf-8 "${TEMP_FILE}" -o "${TEMP_FILE}.utf8"
-    mv "${TEMP_FILE}.utf8" "${TEMP_FILE}"
+    cp "${TEMP_FILE}.utf8" "${TEMP_FILE}"
     ;;
   utf-16|utf-16le|utf-16be)
     iconv -f $encoding -t utf-8 "${TEMP_FILE}" -o "${TEMP_FILE}.utf8"
