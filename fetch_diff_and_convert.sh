@@ -43,7 +43,7 @@ case $encoding in
     ;;
   big5)
     iconv -f big5 -t utf-8 "${TEMP_FILE}" -o "${TEMP_FILE}.utf8"
-    cp "${TEMP_FILE}.utf8" "${TEMP_FILE}"
+    mv "${TEMP_FILE}.utf8" "${TEMP_FILE}"
     ;;
   utf-16|utf-16le|utf-16be)
     iconv -f $encoding -t utf-8 "${TEMP_FILE}" -o "${TEMP_FILE}.utf8"
