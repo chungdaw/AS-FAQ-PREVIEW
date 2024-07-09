@@ -38,12 +38,12 @@ if [ $? -eq 0 ]; then
       # Compare the temporary file and the local file
       if ! diff "${UTF8_TEMP_FILE}" "${LOCAL_FILE}" > /dev/null; then
         # If the files are different, update the local file
-	mv "${UTF8_TEMP_FILE}" "${LOCAL_FILE}"
-	echo "File updated: ${LOCAL_FILE}"
+				mv "${UTF8_TEMP_FILE}" "${LOCAL_FILE}"
+				echo "File updated: ${LOCAL_FILE}"
       else
-	# If the files are the same, delete the temporary file
-	rm "${TEMP_FILE}" "${UTF8_TEMP_FILE}"
-	echo "Files are the same, no update needed."
+				# If the files are the same, delete the temporary file
+				rm "${TEMP_FILE}" "${UTF8_TEMP_FILE}"
+				echo "Files are the same, no update needed."
       fi
     fi
   fi
