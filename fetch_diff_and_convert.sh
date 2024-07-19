@@ -12,8 +12,8 @@ GOOGLE_FILE_ID=$(echo $GOOGLE_DRIVE_FILE_URL | grep -o 'd/[^/]*' | cut -d'/' -f2
 CONVERTED_FILE_NAME="$2"
 
 TEMP_FILE="temp_file.csv"
-OUTPUT_FOLDER="${HOME}/workspace/AS-FAQ-PREVIEW/source/"
-LOCAL_FILE="${HOME}/workspace/AS-FAQ-PREVIEW/source/${CONVERTED_FILE_NAME}"
+OUTPUT_FOLDER="${HOME}/workspace/AS-FAQ-PREVIEW/source"
+LOCAL_FILE="${HOME}/${OUTPUT_FOLDER}/${CONVERTED_FILE_NAME}"
 
 
 # Download the remote file to a temporary file
