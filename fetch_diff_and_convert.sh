@@ -13,6 +13,7 @@ CONVERTED_FILE_NAME="$2"
 
 TEMP_FILE="temp_file.csv"
 SOURCE_FOLDER="${HOME}/workspace/AS-FAQ-PREVIEW/source"
+DUPLICATE_FOLDER="${HOME}/workspace/AS-FAQ-Bot/data/source/"
 LOCAL_FILE="${SOURCE_FOLDER}/${CONVERTED_FILE_NAME}"
 
 
@@ -74,6 +75,7 @@ else
     # If the files are different, update the local file
     mv "${TEMP_FILE}" "${LOCAL_FILE}"
     echo "File updated: ${LOCAL_FILE}"
+    cp -f "${LOCAL_FILE}" "${DUPLICATE_FOLDER}"
   else
     # If the files are the same, delete the temporary file
     rm "${TEMP_FILE}" 
