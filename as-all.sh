@@ -2,14 +2,14 @@
 
 
 WORKSPACE="${HOME}/workspace/AS-FAQ-PREVIEW"
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1vRfyjp1Y479Dxhxm-H9CgP5KwWwPvCA9/view?usp=drive_link AS-ITS.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1XA8tPXU1jhc39pQ5qAij-1I3cfZnHJBO/view?usp=drive_link AS-finding.csv
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1xUtU7fl4yHEkcSmNcDr8Pz_sTsxDX1qR/view?usp=drive_link AS-art.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/126VWafW_G0gw7cyGHJG78GsJbr3qd5vV/view?usp=drive_link AS-dia.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1Gp5oV6ByaYuH2Nki7d81EjmxNkXIFrIM/view?usp=drive_link AS-general.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1SYmDVGKjqLkQK0px7_rLhhsNTpBomuzA/view?usp=drive_link AS-iptt.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/157EQTpRBeEQVtRQdlhteXMVpQSsaUVoR/view?usp=drive_link AS-hro.csv
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1XA8tPXU1jhc39pQ5qAij-1I3cfZnHJBO/view?usp=drive_link AS-dgbas.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/126VWafW_G0gw7cyGHJG78GsJbr3qd5vV/view?usp=drive_link AS-dia.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1cegsKHROQdEcFX-EmWN_BHbsLJ_q9Ryw/view?usp=drive_link AS-edoc.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1Gp5oV6ByaYuH2Nki7d81EjmxNkXIFrIM/view?usp=drive_link AS-general.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/157EQTpRBeEQVtRQdlhteXMVpQSsaUVoR/view?usp=drive_link AS-hro.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1SYmDVGKjqLkQK0px7_rLhhsNTpBomuzA/view?usp=drive_link AS-iptt.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1vRfyjp1Y479Dxhxm-H9CgP5KwWwPvCA9/view?usp=drive_link AS-ITS.csv
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1BESvKgNqu3foM6KrUrSqO6R7MHWrzaG6/view?usp=drive_link AS-proposal.csv
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1cLfcZLWb5uLEPkXubQKrhW095Wq0W6eO/view?usp=drive_link AS-proposal2.csv
 
