@@ -10,6 +10,7 @@ ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1Gp5oV6By
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/157EQTpRBeEQVtRQdlhteXMVpQSsaUVoR/view?usp=drive_link AS-hro.csv
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1SYmDVGKjqLkQK0px7_rLhhsNTpBomuzA/view?usp=drive_link AS-iptt.csv
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1vRfyjp1Y479Dxhxm-H9CgP5KwWwPvCA9/view?usp=drive_link AS-ITS.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1cy6HvAmkvQZd024vZGIJVCJ_OimI5ZrD/view?usp=drive_link AS-meeting.csv
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1BESvKgNqu3foM6KrUrSqO6R7MHWrzaG6/view?usp=drive_link AS-proposal.csv
 ${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1cLfcZLWb5uLEPkXubQKrhW095Wq0W6eO/view?usp=drive_link AS-proposal2.csv
 
