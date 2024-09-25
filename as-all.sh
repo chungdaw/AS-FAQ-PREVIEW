@@ -4,19 +4,19 @@
 WORKSPACE="${HOME}/workspace/AS-FAQ-PREVIEW"
 D_WORKSPACE="${HOME}/workspace/AS-FAQ-Bot"
 
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1mrlWPX_UOdCroV0ysoB2CPqYT_8EarcC/view?usp=drive_link AS-hro.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1zwPVWV9eyUwq9tGqgQIjTgOGx4LYnWO3/view?usp=drive_link AS-dgbas.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1tGm32hXB8kemCajZzWy1m9bN0WNbgXLa/view?usp=drive_link AS-ethics.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1DV2L_VvaTLV58t3ERc9MSZGsvIikNijn/view?usp=drive_link AS-art.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1pJtzFlc7BzlPck0VW2AkynFiWY-MiRi7/view?usp=drive_link AS-edoc.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1hhjRnXgQ6yRA-cAV874k5MUl7pHjDZfS/view?usp=drive_link AS-media.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1YkVqZAuutBhPcszQQIbAOGUMhlCOjb-Z/view?usp=drive_link AS-meeting.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1Kse2ypEzekNEoMKq5k-jLsyD-wbhhY6E/view?usp=drive_link AS-dia.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1lgTQlCakHE_5Zxc89_0AfIcsHAcaBVau/view?usp=drive_link AS-iptt.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1UB4kSMSac07uW4oI9LJouDFM3yKLW4sy/view?usp=drive_link AS-ITS.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1o1NcHhmfcRg-mAuamJfQxpgCywVFF0Cu/view?usp=drive_link AS-proposal.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/19CmiZGizwQYct6VH4ExfEJebQu6HvImY/view?usp=drive_link AS-proposal2.csv
-${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1XRGHXwkJCuimz5ynGlmxo7DgPaCYmKae/view?usp=drive_link AS-general.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1_qaiG8txzw0Jct1EjUSPkCgmknZzuq1c/view?usp=drive_link AS-hro.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1pY15JdUA_doSpturHPNeLWG5S8LySjKw/view?usp=drive_link AS-dgbas.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1lSSFCe5qsFyeXmKBbzliXrRoigQHhOVl/view?usp=drive_link AS-ethics.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/17OhTLsKMerAN6T3LZW9u0GHS8Bk9-i9f/view?usp=drive_link AS-art.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1CGIsv2aFvabR_3YU0k-jL8QxrEC2gBFG/view?usp=drive_link AS-edoc.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1KS6eKkAe_Ib8X0CGcexqcIyiXQAV8O4f/view?usp=drive_link AS-media.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1tqNDdAK6jj7g2dskvmZZqfYWluCLozQP/view?usp=drive_link AS-meeting.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1pSQi1gPVgeA8qYVgWNCM0Jj6-u_zmAqk/view?usp=drive_link AS-dia.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1-O_IwjJ0aitbmkD_c3InUUYyOuCtjGvl/view?usp=drive_link AS-iptt.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1aEhy5hGuTsF75E9091_dPQIrKCCBdxyC/view?usp=drive_link AS-ITS.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1XzsVEiSHxgwQBk1I9lHWfueNlCq4GZ4H/view?usp=drive_link AS-proposal.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1iTfmlJg5tddbEIDcrOfoiiTrys04_8Pg/view?usp=drive_link AS-proposal2.csv
+${WORKSPACE}/fetch_diff_and_convert.sh https://drive.google.com/file/d/186BeehxOQEWu8tzknvcBCb5BmoMponSl/view?usp=drive_link AS-general.csv
 
 
 python3 <<EOF
