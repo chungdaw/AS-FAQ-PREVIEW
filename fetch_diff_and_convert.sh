@@ -11,10 +11,10 @@ GOOGLE_DRIVE_FILE_URL="$1"
 GOOGLE_FILE_ID=$(echo $GOOGLE_DRIVE_FILE_URL | grep -o 'd/[^/]*' | cut -d'/' -f2)
 CONVERTED_FILE_NAME="$2"
 
-TEMP_FILE="temp_file.csv"
-SOURCE_FOLDER="${HOME}/workspace/AS-FAQ-PREVIEW/source"
-DUPLICATE_FOLDER="${HOME}/workspace/AS-FAQ-Bot/data/source/"
-LOCAL_FILE="${SOURCE_FOLDER}/${CONVERTED_FILE_NAME}"
+TEMP_FILE="${HOME}/workspace/AS-FAQ-PREVIEW/temp_file.csv"
+WS_PREVIEW_SOURCE="${HOME}/workspace/AS-FAQ-PREVIEW/source"
+WS_BOT_SOURCE="${HOME}/workspace/AS-FAQ-Bot/data/source"
+LOCAL_FILE="${WS_PREVIEW_SOURCE}/${CONVERTED_FILE_NAME}"
 
 
 # Download the remote file to a temporary file
@@ -68,14 +68,15 @@ sed -i 's/\r//' ${TEMP_FILE}
 
 if [ ! -f "${LOCAL_FILE}" ]; then
   mv "${TEMP_FILE}" "${LOCAL_FILE}"
-  echo "${CONVERTED_FILE_NAME} saved as ${LOCAL_FILE}"
+  echo "First download: ${CONVERTED_FILE_NAME} has been saved to ${WS_PREVIEW_SOURCE} and ${WS_BOT_SOURCE}"
+  cp "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
 else
   # Compare the temporary file and the local file
   if ! diff "${TEMP_FILE}" "${LOCAL_FILE}" > /dev/null; then
     # If the files are different, update the local file
     mv "${TEMP_FILE}" "${LOCAL_FILE}"
     echo "File updated: ${LOCAL_FILE}"
-    cp -f "${LOCAL_FILE}" "${DUPLICATE_FOLDER}"
+    cp -f "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
   else
     # If the files are the same, delete the temporary file
     rm "${TEMP_FILE}" 
