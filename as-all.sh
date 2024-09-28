@@ -9,6 +9,8 @@ TEMP_FILE="${WS_PREVIEW}/AS-ALL-TEMP.txt"
 
 CURRENT_TIME=$(TZ=Asia/Taipei date '+%Y/%m/%d %H:%M')
 
+echo -e "\n**** ${CURRENT_TIME} ****"
+
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1_qaiG8txzw0Jct1EjUSPkCgmknZzuq1c/view?usp=drive_link AS-hro.csv
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1pY15JdUA_doSpturHPNeLWG5S8LySjKw/view?usp=drive_link AS-dgbas.csv
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1Hj6rNwxSoWSom693JBtlVjkCwW8bfBv3/view?usp=drive_link AS-dla.csv
@@ -29,7 +31,7 @@ python3 <<EOF
 import pandas as pd
 import os
 
-data_folder = 'source'  # Folder where the source CSV files are located
+data_folder = '/home/ic_chungdau_wang/workspace/AS-FAQ-PREVIEW/source'  # Folder where the source CSV files are located
 dataframes = []  # List to store dataframes
 
 try:
@@ -54,7 +56,7 @@ try:
     combined_df = combined_df.drop('group', axis=1)
 
     # Write the combined data to a text file
-    with open('AS-ALL-TEMP.txt', 'w') as f:
+    with open('/home/ic_chungdau_wang/workspace/AS-FAQ-PREVIEW/AS-ALL-TEMP.txt', 'w') as f:
         for index, row in combined_df.iterrows():
             for column_name, cell_value in row.items():
                 # Replace any newline characters in the cell value
@@ -81,6 +83,7 @@ else
     # If the files are different, update both workspaces
     mv "${TEMP_FILE}" "${LOCAL_FILE}"
     echo "AS-ALL.txt has been updated, sync to github.com:chungdaw/AS-FAQ-PREVIEW" 
+    cd "${WS_PREVIEW}" || exit
     git pull origin main
     git add AS-ALL.txt
     git add source/*.csv

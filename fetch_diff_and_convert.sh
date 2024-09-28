@@ -18,7 +18,7 @@ LOCAL_FILE="${WS_PREVIEW_SOURCE}/${CONVERTED_FILE_NAME}"
 
 
 # Download the remote file to a temporary file
-curl -L "https://drive.google.com/uc?id=${GOOGLE_FILE_ID}" -o ${TEMP_FILE}
+curl -s -S -L "https://drive.google.com/uc?id=${GOOGLE_FILE_ID}" -o ${TEMP_FILE}
 
 # Check if the download was successful
 if [ $? -ne 0 ]; then
@@ -66,22 +66,47 @@ esac
 echo "${CONVERTED_FILE_NAME} are downloaded and converted to utf8 successfully."
 sed -i 's/\r//' ${TEMP_FILE}
 
+#if [ ! -f "${LOCAL_FILE}" ]; then
+#  mv "${TEMP_FILE}" "${LOCAL_FILE}"
+#  echo "First download: ${CONVERTED_FILE_NAME} has been saved to ${WS_PREVIEW_SOURCE} and ${WS_BOT_SOURCE}"
+#  cp "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
+#else
+#  # Compare the temporary file and the local file
+#  if ! diff "${TEMP_FILE}" "${LOCAL_FILE}" > /dev/null; then
+#    # If the files are different, update the local file
+#    mv "${TEMP_FILE}" "${LOCAL_FILE}"
+#    echo "File updated: ${LOCAL_FILE}"
+#    cp -f "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
+#  else
+#    # If the files are the same, delete the temporary file
+#    rm "${TEMP_FILE}" 
+#    echo "${LOCAL_FILE} has no changes, no update needed."
+#  fi
+#fi
+
 if [ ! -f "${LOCAL_FILE}" ]; then
   mv "${TEMP_FILE}" "${LOCAL_FILE}"
   echo "First download: ${CONVERTED_FILE_NAME} has been saved to ${WS_PREVIEW_SOURCE} and ${WS_BOT_SOURCE}"
   cp "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
 else
-  # Compare the temporary file and the local file
-  if ! diff "${TEMP_FILE}" "${LOCAL_FILE}" > /dev/null; then
-    # If the files are different, update the local file
-    mv "${TEMP_FILE}" "${LOCAL_FILE}"
-    echo "File updated: ${LOCAL_FILE}"
-    cp -f "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
+  # Check if TEMP_FILE is a valid CSV (the first line should have 6 fields)
+  if [ "$(head -n 1 "${TEMP_FILE}" | awk -F, '{print NF}')" -ne 6 ]; then
+    echo "${TEMP_FILE} is not valid CSV format"
+    rm "${TEMP_FILE}"
   else
-    # If the files are the same, delete the temporary file
-    rm "${TEMP_FILE}" 
-    echo "Files are the same, no update needed."
+    # Compare the temporary file and the local file
+    if ! diff "${TEMP_FILE}" "${LOCAL_FILE}" > /dev/null; then
+      # If the files are different, update the local file
+      mv "${TEMP_FILE}" "${LOCAL_FILE}"
+      echo "File updated: ${LOCAL_FILE}"
+      cp -f "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
+    else
+      # If the files are the same, delete the temporary file
+      rm "${TEMP_FILE}"
+      echo "${LOCAL_FILE} has no changes, no update needed."
+    fi
   fi
 fi
+
  
 
