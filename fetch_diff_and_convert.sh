@@ -9,12 +9,12 @@ fi
 # Set the remote file URL and local file path
 GOOGLE_DRIVE_FILE_URL="$1"
 GOOGLE_FILE_ID=$(echo $GOOGLE_DRIVE_FILE_URL | grep -o 'd/[^/]*' | cut -d'/' -f2)
-CONVERTED_FILE_NAME="$2"
+FILE_NAME="$2"
 
 TEMP_FILE="${HOME}/workspace/AS-FAQ-PREVIEW/temp_file.csv"
 WS_PREVIEW_SOURCE="${HOME}/workspace/AS-FAQ-PREVIEW/source"
 WS_BOT_SOURCE="${HOME}/workspace/AS-FAQ-Bot/data/source"
-LOCAL_FILE="${WS_PREVIEW_SOURCE}/${CONVERTED_FILE_NAME}"
+LOCAL_FILE="${WS_PREVIEW_SOURCE}/${FILE_NAME}"
 
 
 # Download the remote file to a temporary file
@@ -63,12 +63,12 @@ case $encoding in
     ;;
 esac
 
-echo "${CONVERTED_FILE_NAME} are downloaded and converted to utf8 successfully."
+echo "${FILE_NAME} are downloaded and converted to utf8 successfully."
 sed -i 's/\r//' ${TEMP_FILE}
 
 #if [ ! -f "${LOCAL_FILE}" ]; then
 #  mv "${TEMP_FILE}" "${LOCAL_FILE}"
-#  echo "First download: ${CONVERTED_FILE_NAME} has been saved to ${WS_PREVIEW_SOURCE} and ${WS_BOT_SOURCE}"
+#  echo "First download: ${FILE_NAME} has been saved to ${WS_PREVIEW_SOURCE} and ${WS_BOT_SOURCE}"
 #  cp "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
 #else
 #  # Compare the temporary file and the local file
@@ -86,7 +86,7 @@ sed -i 's/\r//' ${TEMP_FILE}
 
 if [ ! -f "${LOCAL_FILE}" ]; then
   mv "${TEMP_FILE}" "${LOCAL_FILE}"
-  echo "First download: ${CONVERTED_FILE_NAME} has been saved to ${WS_PREVIEW_SOURCE} and ${WS_BOT_SOURCE}"
+  echo "First download: ${FILE_NAME} has been saved to ${WS_PREVIEW_SOURCE} and ${WS_BOT_SOURCE}"
   cp "${LOCAL_FILE}" "${WS_BOT_SOURCE}"
 else
   # Check if TEMP_FILE is a valid CSV (the first line should have 6 fields)
