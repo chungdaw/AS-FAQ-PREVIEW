@@ -24,6 +24,7 @@ ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1-O_IwjJ
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1aEhy5hGuTsF75E9091_dPQIrKCCBdxyC/view?usp=drive_link AS-ITS.csv
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1XzsVEiSHxgwQBk1I9lHWfueNlCq4GZ4H/view?usp=drive_link AS-proposal.csv
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1iTfmlJg5tddbEIDcrOfoiiTrys04_8Pg/view?usp=drive_link AS-proposal2.csv
+${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1kkVqvYgOquy1_r-Mxit2tQnjM-305MsB/view?usp=drive_link AS-proposal3.csv
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/186BeehxOQEWu8tzknvcBCb5BmoMponSl/view?usp=drive_link AS-general.csv
 
 
