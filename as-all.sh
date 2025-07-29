@@ -26,7 +26,7 @@ ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1XzsVEiS
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1iTfmlJg5tddbEIDcrOfoiiTrys04_8Pg/view?usp=drive_link AS-proposal2.csv
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1kkVqvYgOquy1_r-Mxit2tQnjM-305MsB/view?usp=drive_link AS-proposal3.csv
 ${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/186BeehxOQEWu8tzknvcBCb5BmoMponSl/view?usp=drive_link AS-general.csv
-
+${WS_PREVIEW}/fetch_diff_and_convert.sh https://drive.google.com/file/d/1_57sHTErrvRHJePstAxIidErV0TZhnVw/view?usp=drive_link AS-as.csv
 
 python3 <<EOF
 import pandas as pd
